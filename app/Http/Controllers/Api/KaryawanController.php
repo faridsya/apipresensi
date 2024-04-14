@@ -82,7 +82,7 @@ class KaryawanController extends Controller
 		$hasil=false;
 		$pesan="Data tidak ditemukan";
         $posts = DB::table('karyawan')->where('email', [$request->email])->first(); // querybuilder
-	//$posts = Karyawan::find($id); aww
+	//$posts = Karyawan::find($id);
 		if($posts!=null){
 			$email=$posts->email;
 			$hasil=true;
