@@ -10,7 +10,7 @@ class KaryawanController extends Controller
 {
      public function index()
     {
-        //get all posts
+        //get all posts tes
         $posts=Karyawan::all(); 
 		//$posts= DB::select('select * from karyawan ');  //SQL
 		//$posts = DB::table('karyawan')->where('id', [1])->first(); // querybuilder
