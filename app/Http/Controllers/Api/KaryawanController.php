@@ -77,34 +77,8 @@ class KaryawanController extends Controller
 		return new PostResource($hasil, $pesan, null);
     }
 	
-	 public function cekemail(Request $request)
-    {
-		$hasil=false;
-		$pesan="Data tidak ditemukan";
-        $posts = DB::table('karyawan')->where('email', [$request->email])->first(); // querybuilder
-	//$posts = Karyawan::find($id); why
-		if($posts!=null){
-			$email=$posts->email;
-			$hasil=true;
-			$pesan="Data ditemukan";
-		}
-		
-		return new PostResource($hasil, $pesan, null);
-    }
 	
-	public function validasiregister(Request $request)
-    {
-		$hasil=false;
-		$pesan="Data tidak ditemukan";
-        $posts = DB::table('karyawan')->where('nik', [$request->nik])->first(); // querybuilder
-		//$posts = Karyawan::find($id);
-		if($posts!=null){
-			$email=$posts->email;
-			$hasil=true;
-			$pesan="Data ditemukan";
-		}
-		
-		return new PostResource($hasil, $pesan, null);
-    }
+	
+	
 	
 }
